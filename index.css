@@ -166,19 +166,20 @@ h2{
 .current-det{
     display: block;
     margin:1.55em 0em;
+    margin-top: 1em;    
 }
 
 .cd{
     display: block;
     margin:1.55em 0em;
+    margin-top: 1em;
 }
 
 .fd{
     display: block;
-    margin-top: 1.75em;
+    margin-top: 2.5em;
+    margin-bottom: 1.5em;
     display: flex;
-    flex-direction: row;
-    max-width: 420px;
     overflow: scroll;
     font-size: 12px;
 }
@@ -193,23 +194,25 @@ h2{
     border: 1px solid rgb(105, 105, 105);
     border-radius: 10px;
     background: rgba(0,0,0,0.2);
-    padding-bottom: 0.5em;
+    padding: 0.75em 0em;
+    min-width: 75px;
 }
 
 ::-webkit-scrollbar{
+    display: none;
     visibility: hidden;
 }
 
 ::-webkit-scrollbar-corner{
+    display: none;
     visibility: hidden;
 }
 
 .w-icon{
-    height: 75px;
-    width: 75px;
+    height: 50px;
+    width: 50px;
 }
 
 .day{
-    margin-top: 0.5em;
     font-size:larger ;
 }
