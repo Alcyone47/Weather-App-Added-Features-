@@ -27,20 +27,22 @@ let weather = {
     apiKey: "8c27a71e3902d390bf1c0f520111bbe0",
     fetchWeather: function (city) {
         fetch(
-        "https://api.openweathermap.org/data/2.5/weather?q=" +
-            city +
-            "&units=metric&appid=" +
-            this.apiKey
-        )
+            "https://api.openweathermap.org/data/2.5/weather?q=" +
+                city +
+                "&units=metric&appid=" +
+                this.apiKey
+            )
         .then((response) => {
             if (!response.ok) {
             alert("Location not found");
-            throw new Error("Locatoin not found");
+            throw new Error("Location not found");
             }
             return response.json();
-        })
+            })
         .then((data) => this.displayWeather(data));
     },
+
+
     displayWeather: function (data) {
         const { name } = data;
         const { icon, description } = data.weather[0];
@@ -59,14 +61,18 @@ let weather = {
         document.body.style.backgroundImage =
         "url('https://source.unsplash.com/1600x900/?" + name + " " + temp +"')";
     },
+    
     search: function () {
         this.fetchWeather(document.querySelector(".search-bar").value);
     },
 };
 
+
 document.querySelector(".search button.enter").addEventListener("click", function () {
     weather.search();
 });
+
+
 
 document
     .querySelector(".search-bar")
@@ -76,4 +82,6 @@ document
         }
     });
 
+
+/* Default call */
 weather.fetchWeather("Beverly Hills");
