@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
-    <script src="./script.js" defer></script>
+    <script src="./current.js" defer></script>
     <script src="./forecast.js" defer></script>
 </head>
 
@@ -26,7 +26,17 @@
         </div>
         <div class="weather loading">
             <h2 class="city">Weather in Beverly Hills</h2>
-            <h1 class="temp">51°C</h1>
+            <div class="ttd">
+                <h1 class="temp">51°C</h1>
+                <div class="time-day">
+                    <div class="time" id="time">
+                        12:30 <span id="am-pm">PM</span>
+                    </div>
+                    <div class="date" id="date">
+                        Monday, 25 May
+                    </div>
+                </div>
+            </div>
             <div class="actionBtns">
                 <button class="actionBtn current">Current</button>
                 <button class="actionBtn forecast">Forecast</button>
@@ -49,7 +59,7 @@
                     <div class="weather-forecast-item">
                         <div class="day">Mon</div>
                         <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
-                        <div class="minTemp">Min - 25.6&#176;C</div>
+                        <div class="Temp">Min - 25.6&#176;C</div>
                         <div class="temp">Max - 35.6&#176;C</div>
                     </div>
                     <div class="weather-forecast-item">
