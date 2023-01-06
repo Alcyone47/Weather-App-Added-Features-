@@ -26,7 +26,7 @@ let forecast = {
         )
         .then((response) => {
             if (!response.ok){
-                alert("Loading forecast failed");
+                /*alert("Loading forecast failed");*/
             }
             return response.json
         })
